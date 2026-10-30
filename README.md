@@ -1,9 +1,23 @@
-# inferredtps
+# Inferred TPS
 
-## Setup
+## Description
 
-For setup instructions, please see the [Fabric Documentation page](https://docs.fabricmc.net/develop/getting-started/creating-a-project#setting-up) related to the IDE that you are using.
+Inferred TPS is a small client-sided mod that estimates the server TPS.
 
-## License
+Or in simple words, making a guess about what is the server TPS.
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+AND ALSO DOESN'T NEED A SERVER SIDED MOD!
+
+## How it works
+
+Inferred TPS estimates the server TPS by measuring the rate of `ClientboundSetTimePacket` packets and using some simple
+math.
+
+## Commands
+
+| Command            | What it does                            |
+|--------------------|-----------------------------------------|
+| /itps get          | Prints out the current TPS              |
+| /itps tablist show | Displays the esimate TPS in the tablist |
+| /itps tablist hide | Hides the tablist thingamajig           |
+
