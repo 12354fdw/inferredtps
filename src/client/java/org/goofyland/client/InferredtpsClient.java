@@ -16,6 +16,10 @@ public class InferredtpsClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
+        registerCommands();
+    }
+
+    private static void registerCommands() {
         ClientCommandRegistrationCallback.EVENT.register(((dispatcher, buildContext) ->
                 dispatcher.register(ClientCommands.literal("itps")
                         .then(ClientCommands.literal("get")
