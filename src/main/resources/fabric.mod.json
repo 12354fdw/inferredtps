@@ -15,9 +15,6 @@
 	"icon": "assets/inferredtps/icon.png",
 	"environment": "*",
 	"entrypoints": {
-		"main": [
-			"org.goofyland.Inferredtps"
-		],
 		"client": [
 			"org.goofyland.client.InferredtpsClient"
 		]
