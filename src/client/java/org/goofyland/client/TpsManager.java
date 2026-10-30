@@ -20,7 +20,8 @@ public class TpsManager {
         var deltaGameTick = currentGameTime - lastGameTime;
 
         tps = (deltaGameTick * 1000.0) / deltaTime;
-        InferredtpsClient.LOGGER.info("TPS: {}", tps);
+//        InferredtpsClient.LOGGER.info("TPS: {}", tps);
+        InferredtpsClient.TABLIST_MANAGER.tick(tps);
 
         lastPacketTime = currentTime;
         lastGameTime = currentGameTime;
