@@ -3,6 +3,7 @@ package org.goofyland.client;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandRegistrationCallback;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommands;
+import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -17,6 +18,8 @@ public class InferredtpsClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         registerCommands();
+
+        ClientTickEvents.END_CLIENT_TICK.register(client -> TABLIST_MANAGER.tick());
     }
 
     private static void registerCommands() {
