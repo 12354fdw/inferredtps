@@ -3,7 +3,7 @@
 	"package": "org.goofyland.client.mixin",
 	"compatibilityLevel": "JAVA_25",
 	"client": [
-		"ExampleClientMixin"
+      "ConnectionMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
