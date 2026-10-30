@@ -19,6 +19,9 @@ public class InferredtpsClient implements ClientModInitializer {
                 dispatcher.register(Commands.literal("itps")
                         .then(Commands.literal("get")
                                 .executes(MOD_COMMANDS::itps_get)
+                        ).then(Commands.literal("tablist")
+                                .then(Commands.literal("show")).executes(MOD_COMMANDS::itps_tablist_show)
+                                .then(Commands.literal("hide")).executes(MOD_COMMANDS::itps_tablist_hide)
                         )
                 )
         )));

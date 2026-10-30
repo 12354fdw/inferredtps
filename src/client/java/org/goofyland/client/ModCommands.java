@@ -11,4 +11,13 @@ public class ModCommands {
 
         return 0;
     }
+
+    public int itps_tablist_show(CommandContext<CommandSourceStack> ctx) {
+        return 0;
+    }
+
+    public int itps_tablist_hide(CommandContext<CommandSourceStack> ctx) {
+
+        return 0;
+    }
 }
