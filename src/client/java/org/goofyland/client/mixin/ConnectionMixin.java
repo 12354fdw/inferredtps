@@ -17,6 +17,6 @@ public class ConnectionMixin {
 	private static <T extends PacketListener>  void genericsFtwMixin(Packet<T> packet, PacketListener listener, CallbackInfo ci) {
 		if (!(packet instanceof ClientboundSetTimePacket)) return;
 
-		InferredtpsClient.LOGGER.info(packet.toString());
+		InferredtpsClient.TPS_MANAGER.handlePacket((ClientboundSetTimePacket) packet);
 	}
 }
